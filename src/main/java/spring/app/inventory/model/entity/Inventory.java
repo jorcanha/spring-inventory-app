@@ -13,7 +13,7 @@ import java.time.LocalDate;
     @AllArgsConstructor
     @Entity
     @Table(name = "inventarios")
-    public class Inventario {
+    public class Inventory {
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,7 +21,7 @@ import java.time.LocalDate;
 
         @ManyToOne
         @JoinColumn(name = "producto_id", nullable = false)
-        private Productos producto;
+        private Products producto;
 
         @Column(nullable = false)
         private int cantidad;

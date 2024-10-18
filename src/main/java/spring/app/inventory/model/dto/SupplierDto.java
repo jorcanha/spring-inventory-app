@@ -9,7 +9,7 @@ import java.util.List;
 
 @Data
 @Builder
-public class ProveedorDto {
+public class SupplierDto {
 
     @NotNull(message = "ID cannot be null")
     private Long id;
@@ -29,5 +29,5 @@ public class ProveedorDto {
     @NotBlank(message = "Dirección is mandatory")
     private String direccion;
 
-    private List<Long> productosIds; // Opcional, lista de IDs de productos
+    private List<Long> productosIds;
 }

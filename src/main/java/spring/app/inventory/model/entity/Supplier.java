@@ -13,7 +13,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Proveedor {
+public class Supplier {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -33,9 +33,7 @@ public class Proveedor {
     @NotBlank(message = "Dirección obligatoria")
     private String direccion;
 
-    // Relación uno a muchos con ProveedorProducto
-    @OneToMany(mappedBy = "proveedor", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<ProveedorProducto> productos; // Relación con ProveedorProducto
+
 
 
 }

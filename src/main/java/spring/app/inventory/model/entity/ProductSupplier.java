@@ -3,25 +3,30 @@ package spring.app.inventory.model.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.UUID;
 
- @Data
+
+@Data
  @Entity
  @Table(name = "proveedor_producto")
- public class ProveedorProducto {
+ public class ProductSupplier {
 
      @Id
      @GeneratedValue(strategy = GenerationType.IDENTITY)
      private long id;
 
+    @Column(updatable = false, nullable = false, unique = true)
+    private UUID uuid;
+
      private String nombre;
 
      @ManyToOne
      @JoinColumn(name = "proveedor_id", nullable = false)
-     private Proveedor proveedor; // Relación con Proveedor
+     private Supplier supplier;
 
      @ManyToOne
      @JoinColumn(name = "producto_id", nullable = false)
-     private Productos producto; // Relación con Producto
+     private Products producto;
 
      private Double precioProveedor;
 

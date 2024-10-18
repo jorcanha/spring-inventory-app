@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class CategoriaDto {
+public class CategoryDto {
 
     @NotNull(message = "ID cannot be null")
     private Long id;
@@ -15,5 +15,5 @@ public class CategoriaDto {
     @NotBlank(message = "Nombre is mandatory")
     private String nombre;
 
-    private String descripcion; // Opcional, puedes agregar validación si lo deseas
+    private String descripcion;
 }

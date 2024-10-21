@@ -8,13 +8,13 @@ import java.time.LocalDate;
 
 @Data
 @Builder
-public class InventarioDto {
+public class InventoryDto {
 
     @NotNull(message = "ID cannot be null")
     private Long id;
 
     @NotNull(message = "Producto ID cannot be null")
-    private Long productoId; // ID del producto
+    private Long productoId;
 
     @NotNull(message = "Cantidad cannot be null")
     private int cantidad;
